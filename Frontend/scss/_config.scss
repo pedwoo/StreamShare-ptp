@@ -59,7 +59,7 @@ $breakpoints: (
 .text-title {
     @include titlefont;
     line-height: 0.9;
-    font-size: 13rem;
+    font-size: 10rem;
     font-weight: bold;
 
     @include respond-to('tablet-ls') {
@@ -67,7 +67,7 @@ $breakpoints: (
     }
 
     @include respond-to('mobile') {
-        font-size: 7rem;
+        font-size: 6.5rem;
     }
 }
 .text-heading {

@@ -44,6 +44,10 @@
     background-color: $accent;
     font-weight: bold;
     color: $text1;
+
+    &.btn-shadow {
+        @include box-shadow(0 0 5rem 0 $accent);
+    }
 }
 
 // Secondary button has white background and background2 text
@@ -51,6 +55,7 @@
     $inset: .45rem;
     @include btn;
     background-color: transparent;
+    color: $text1;
 
     @include box-shadow(inset 0 0 0 .2rem $text1);
 
