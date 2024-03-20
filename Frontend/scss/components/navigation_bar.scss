@@ -25,9 +25,10 @@
         justify-content: space-between;
         gap: 5rem;
         width: $inner-width;
+        border: .25rem solid $background2;
         border-radius: 10rem;
         padding: 1rem;
-        background-color: $background2;
+        background-color: $background1;
 
         .logo {
             display: grid;
@@ -35,7 +36,7 @@
             min-width: 8rem;
             height: 8rem;
             border-radius: 8rem;
-            background-color: $background1;
+            background-color: $background2;
 
             img {
                 right: -.25rem;

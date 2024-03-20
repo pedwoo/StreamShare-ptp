@@ -11,9 +11,10 @@
         place-items: center;
         width: 12rem;
         height: 3rem;
-        border: .2rem solid $text1;
+        border: .2rem solid $background2;
         border-radius: 3rem;
-        opacity: .65;
+        background-color: $background1;
+        color: rgba($text1, 0.65);
     }
 
     .text-title {
@@ -21,11 +22,11 @@
     }
 
     .text-body {
-        width: min(80vw, 65rem);
+        width: min(80vw, 55rem);
         margin-bottom: 3rem;
     }
 
-    .lottie-animation {
+    .lottie-animation-wrapper {
         width: 2rem;
         height: 3.5rem;
         margin-top: 9rem;
@@ -65,7 +66,7 @@
             display: none;
         }
 
-        .lottie-animation {
+        .lottie-animation-wrapper {
             margin-top: 6rem;
         }
     }
@@ -73,7 +74,7 @@
     @include respond-to('mobile') {
         min-height: 60dvh;
 
-        .lottie-animation {
+        .lottie-animation-wrapper {
             margin-top: 4rem;
         }
     }
