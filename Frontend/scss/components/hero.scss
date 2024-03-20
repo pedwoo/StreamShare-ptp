@@ -24,6 +24,14 @@
     .text-body {
         width: min(80vw, 55rem);
         margin-bottom: 3rem;
+        opacity: 0;
+        animation: fade-in 1s ease forwards .75s;
+    }
+
+    .button-bar {
+        opacity: 0;
+        translate: 0 50%;
+        animation: fade-slide-up 1s ease forwards 1.25s;
     }
 
     .lottie-animation-wrapper {
@@ -32,6 +40,7 @@
         margin-top: 9rem;
         border: .2rem solid $text1;
         border-radius: 3.5rem;
+        rotate: 180deg;
 
         .lottie-dot {
             display: block;

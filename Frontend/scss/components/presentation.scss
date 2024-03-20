@@ -29,6 +29,7 @@
     }
 
     .presentation-inner {
+        overflow-y: hidden;
         width: $inner-width;
         gap: 5rem;
         

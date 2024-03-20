@@ -12,7 +12,9 @@
     
     color: $text1;
 
-    @include transition(all .25s ease);
+    &.show {
+        @include transition(all .25s ease .5s);
+    }
 
     &.hidden {
         translate: 0 -100%;
