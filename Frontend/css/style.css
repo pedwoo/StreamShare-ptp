@@ -391,15 +391,26 @@
   height: 13rem;
   padding-top: 3rem;
   color: #F4F2EF;
-}
-.navigation-wrapper.show {
-  -webkit-transition: all 0.25s ease 0.5s;
-  -moz-transition: all 0.25s ease 0.5s;
-  -o-transition: all 0.25s ease 0.5s;
-  transition: all 0.25s ease 0.5s;
+  translate: 0 -50%;
+  opacity: 0;
+  animation: fadeDown 1s ease 0.25s forwards;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .navigation-wrapper.hidden {
-  translate: 0 -100%;
+  transform: translateY(calc(-100% - 0.5rem));
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    translate: 0 -50%;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
 }
 .navigation-wrapper .navigation-inner {
   display: flex;
@@ -910,6 +921,56 @@
     padding-left: 4rem;
   }
 }
+.github-main-page-wrapper {
+  padding: 21rem 0;
+}
+.github-main-page-wrapper .github-main-page-inner {
+  width: min(85rem, 90vw);
+  border: 0.25rem solid #FC466B;
+  border-radius: 2.5rem;
+  padding: 9rem;
+  background-color: #141414;
+}
+.github-main-page-wrapper .github-main-page-inner .text-heading {
+  margin-bottom: 2rem;
+}
+.github-main-page-wrapper .github-main-page-inner .text-body {
+  width: min(48rem, 100%);
+  margin: 0 auto;
+}
+.github-main-page-wrapper .github-main-page-inner .btn-primary {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  margin-top: 3rem;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 11rem;
+  padding: 0 2.25rem;
+}
+.github-main-page-wrapper .github-main-page-inner .btn-primary img {
+  width: 6.5rem;
+}
+@media (max-width: 850px) {
+  .github-main-page-wrapper {
+    padding: 18rem 0;
+  }
+  .github-main-page-wrapper .github-main-page-inner {
+    padding: 8rem;
+  }
+}
+@media (max-width: 550px) {
+  .github-main-page-wrapper {
+    padding: 15rem 0;
+  }
+  .github-main-page-wrapper .github-main-page-inner {
+    padding: 7rem 5.5rem;
+  }
+  .github-main-page-wrapper .github-main-page-inner .btn-primary {
+    scale: 0.9;
+  }
+}
+
 html {
   overflow-x: hidden;
   box-sizing: border-box;

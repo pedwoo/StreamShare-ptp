@@ -12,12 +12,25 @@
     
     color: $text1;
 
-    &.show {
-        @include transition(all .25s ease .5s);
-    }
+    translate: 0 -50%;
+    opacity: 0;
+
+    animation: fadeDown 1s ease .25s forwards;
+    @include transition(all .5s ease);
 
     &.hidden {
-        translate: 0 -100%;
+        transform: translateY(calc(-100% - .5rem));
+    }
+
+    @keyframes fadeDown {
+        0% {
+            opacity: 0;
+            translate: 0 -50%;
+        }
+        100% {
+            opacity: 1;
+            translate: 0 0;
+        }
     }
 
     .navigation-inner {
