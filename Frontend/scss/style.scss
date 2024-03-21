@@ -2,6 +2,13 @@
 @import 'buttons';
 @import 'components';
 
+@import 'components/navigation-bar.scss';
+@import 'components/hero.scss';
+@import 'components/presentation.scss';
+@import 'components/github-section.scss';
+@import 'components/main-page-login.scss';
+@import 'components/footer.scss';
+
 
 html {
     overflow-x: hidden;

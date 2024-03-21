@@ -4,7 +4,7 @@
     .footer-inner {
         display: grid;
         place-items: center;
-        width: 100%;
+        width: $inner-width;
         height: 30rem;
         border: .25rem solid $background2;
         border-radius: 3.5rem;

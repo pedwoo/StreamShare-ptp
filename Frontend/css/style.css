@@ -677,34 +677,73 @@
   animation: fade-slide-up 1s ease forwards 1.25s;
 }
 .banner-inner .lottie-animation-wrapper {
-  width: 2rem;
-  height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
   margin-top: 9rem;
-  border: 0.2rem solid #F4F2EF;
-  border-radius: 3.5rem;
-  rotate: 180deg;
+  opacity: 0;
+  animation: fade-in 2s ease forwards 2.5s;
 }
-.banner-inner .lottie-animation-wrapper .lottie-dot {
-  display: block;
-  top: 0.4rem;
-  left: 0.4rem;
-  width: 0.8rem;
-  aspect-ratio: 1;
+.banner-inner .lottie-animation-wrapper .lottie-arrow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transform: translateY(0);
+  translate: -50% 0;
+}
+.banner-inner .lottie-animation-wrapper .lottie-arrow:nth-child(1) {
+  animation: lottie-animation 3s ease-in-out infinite;
+}
+.banner-inner .lottie-animation-wrapper .lottie-arrow:nth-child(2) {
+  animation: lottie-animation 3s ease-in-out infinite 1s;
+}
+.banner-inner .lottie-animation-wrapper .lottie-arrow:nth-child(3) {
+  animation: lottie-animation 3s ease-in-out infinite 2s;
+}
+.banner-inner .lottie-animation-wrapper .lottie-arrow span {
+  width: 1.5rem;
+  height: 0.25rem;
   border-radius: 1rem;
   background-color: #F4F2EF;
-  animation: lottie-animation 1.5s infinite ease;
+}
+.banner-inner .lottie-animation-wrapper .lottie-arrow span:nth-child(1) {
+  translate: 0.475rem 0;
+  rotate: 35deg;
+}
+.banner-inner .lottie-animation-wrapper .lottie-arrow span:nth-child(2) {
+  translate: -0.475rem 0;
+  rotate: -35deg;
 }
 @keyframes lottie-animation {
   0% {
+    transform: translateY(-3rem);
     opacity: 0;
-    translate: 0, 0;
+    scale: 0.5;
   }
-  20%, 80% {
+  50% {
+    transform: translateY(0);
     opacity: 1;
+    scale: 1;
   }
   100% {
+    transform: translateY(3rem);
     opacity: 0;
-    translate: 0 1.4rem;
+    scale: 0.5;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @media (max-width: 1180px) {
@@ -833,6 +872,69 @@
   }
 }
 
+.github-main-page-wrapper {
+  padding: 21rem 0;
+}
+.github-main-page-wrapper .github-main-page-inner {
+  width: min(85rem, 90vw);
+  border: 0.25rem solid #BE4B76;
+  border-radius: 2.5rem;
+  padding: 9rem;
+  background-color: #141414;
+}
+.github-main-page-wrapper .github-main-page-inner .github-shadow {
+  user-select: none;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  width: 64rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: 50% 30%;
+  background-color: #222222;
+  filter: blur(3rem);
+}
+.github-main-page-wrapper .github-main-page-inner .text-heading {
+  margin-bottom: 2rem;
+}
+.github-main-page-wrapper .github-main-page-inner .text-body {
+  width: min(48rem, 100%);
+  margin: 0 auto;
+}
+.github-main-page-wrapper .github-main-page-inner .btn-primary {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  margin-top: 3rem;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 11rem;
+  padding: 0 2.25rem;
+}
+.github-main-page-wrapper .github-main-page-inner .btn-primary img {
+  width: 6.5rem;
+}
+@media (max-width: 850px) {
+  .github-main-page-wrapper {
+    padding: 18rem 0;
+  }
+  .github-main-page-wrapper .github-main-page-inner {
+    padding: 8rem;
+  }
+}
+@media (max-width: 550px) {
+  .github-main-page-wrapper {
+    padding: 15rem 0;
+  }
+  .github-main-page-wrapper .github-main-page-inner {
+    padding: 7rem 5.5rem;
+  }
+  .github-main-page-wrapper .github-main-page-inner .btn-primary {
+    scale: 0.9;
+  }
+}
+
 .main-page-login-wrapper .main-page-login-inner {
   width: min(1440px, 90vw);
 }
@@ -909,76 +1011,13 @@
     padding-left: 4rem;
   }
 }
-.github-main-page-wrapper {
-  padding: 21rem 0;
-}
-.github-main-page-wrapper .github-main-page-inner {
-  width: min(85rem, 90vw);
-  border: 0.25rem solid #FC466B;
-  border-radius: 2.5rem;
-  padding: 9rem;
-  background-color: #141414;
-}
-.github-main-page-wrapper .github-main-page-inner .github-shadow {
-  user-select: none;
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-  right: 0;
-  width: 64rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  translate: 50% 30%;
-  background-color: #222222;
-  filter: blur(3rem);
-}
-.github-main-page-wrapper .github-main-page-inner .text-heading {
-  margin-bottom: 2rem;
-}
-.github-main-page-wrapper .github-main-page-inner .text-body {
-  width: min(48rem, 100%);
-  margin: 0 auto;
-}
-.github-main-page-wrapper .github-main-page-inner .btn-primary {
-  align-self: center;
-  display: grid;
-  place-items: center;
-  margin-top: 3rem;
-  width: 11rem;
-  height: 11rem;
-  border-radius: 11rem;
-  padding: 0 2.25rem;
-}
-.github-main-page-wrapper .github-main-page-inner .btn-primary img {
-  width: 6.5rem;
-}
-@media (max-width: 850px) {
-  .github-main-page-wrapper {
-    padding: 18rem 0;
-  }
-  .github-main-page-wrapper .github-main-page-inner {
-    padding: 8rem;
-  }
-}
-@media (max-width: 550px) {
-  .github-main-page-wrapper {
-    padding: 15rem 0;
-  }
-  .github-main-page-wrapper .github-main-page-inner {
-    padding: 7rem 5.5rem;
-  }
-  .github-main-page-wrapper .github-main-page-inner .btn-primary {
-    scale: 0.9;
-  }
-}
-
 .footer-wrapper {
   padding: 0 3rem 3rem;
 }
 .footer-wrapper .footer-inner {
   display: grid;
   place-items: center;
-  width: 100%;
+  width: min(1440px, 90vw);
   height: 30rem;
   border: 0.25rem solid #222222;
   border-radius: 3.5rem;
