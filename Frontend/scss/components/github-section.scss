@@ -8,6 +8,20 @@
         padding: 9rem;
         background-color: $background1;
 
+        .github-shadow {
+            user-select: none;
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            right: 0;
+            width: 64rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            translate: 50% 30%;
+            background-color: $background2;
+            filter: blur(3rem);
+        }
+
         .text-heading {
             margin-bottom: 2rem;
         }

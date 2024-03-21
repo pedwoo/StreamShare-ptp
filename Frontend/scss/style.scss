@@ -64,6 +64,8 @@ html {
         background-color: $background1;
         background-image: radial-gradient($dot-color 5%, transparent 0);
         background-size: 40px 40px;
+        background-repeat: repeat;
+        background-attachment: scroll;
         color: $text1;
 
         .animateOnScroll {

@@ -743,19 +743,7 @@
   border-radius: 50%;
   translate: -50% 0;
   background-color: #222222;
-}
-.presentation-wrapper .presentation-shadow::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 130%;
-  height: 130%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  translate: -50% -50%;
-  background-color: transparent;
-  backdrop-filter: blur(3rem);
+  filter: blur(3rem);
 }
 .presentation-wrapper .presentation-inner {
   width: min(1440px, 90vw);
@@ -931,6 +919,19 @@
   padding: 9rem;
   background-color: #141414;
 }
+.github-main-page-wrapper .github-main-page-inner .github-shadow {
+  user-select: none;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  width: 64rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: 50% 30%;
+  background-color: #222222;
+  filter: blur(3rem);
+}
 .github-main-page-wrapper .github-main-page-inner .text-heading {
   margin-bottom: 2rem;
 }
@@ -1016,6 +1017,8 @@ html body {
   background-color: #141414;
   background-image: radial-gradient(rgba(244, 242, 239, 0.2) 5%, transparent 0);
   background-size: 40px 40px;
+  background-repeat: repeat;
+  background-attachment: scroll;
   color: #F4F2EF;
 }
 html body .animateOnScroll.show {
