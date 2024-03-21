@@ -7,9 +7,9 @@
 
 
 // COLOR PALETTE
-$background1: #242424;
+$background1: #141414;
 $background1-transparent: rgba($background1, .5);
-$background2: #2E2E2E;
+$background2: #222222;
 $background2-transparent: rgba($background2, .65);
 $text1: #F4F2EF;
 
@@ -92,6 +92,13 @@ $breakpoints: (
     @include titlefont;
     line-height: 1.3;
     font-size: 3.5rem;
+
+    @include respond-to('tablet-ls') {
+        font-size: 2.8rem;
+    }
+    @include respond-to('mobile') {
+        font-size: 2.2rem;
+    }
 }
 .text-caption {
     @include mainfont;
@@ -106,7 +113,8 @@ $breakpoints: (
     line-height: 1.5;
     font-size: 1.8rem;
     font-weight: 400;
-    opacity: .85;
+    // opacity: .85;
+    color: rgba($text1, .65);
 
     &.bold {
         font-weight: 600;
