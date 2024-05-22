@@ -95,3 +95,29 @@
         }
     }
 }
+
+// Tertiary button has transparent background and body text (with optional arrow to the right)
+.btn-tertiary {
+    @include btn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 1;
+    height: auto;
+    padding: 0;
+    font-weight: bold;
+    background: transparent;
+    color: $text1;
+
+    svg {
+        @include transition(all .25s ease);
+    }
+    &:not(:disabled) {
+        &:hover {
+            svg {
+                translate: 1rem 0;
+            }
+        }
+    }
+}
